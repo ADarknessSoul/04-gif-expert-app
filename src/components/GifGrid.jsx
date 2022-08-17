@@ -12,6 +12,11 @@ export const GifGrid = ({category}) => {
     
     <h3>{category}</h3>
     
+    {
+      
+      isLoading && (<h2>Cargando...</h2>) //Ternario simplificado
+      
+    }
     
     <div className='card-grid'>
       { 
