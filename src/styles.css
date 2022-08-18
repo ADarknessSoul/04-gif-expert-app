@@ -1,12 +1,45 @@
-* {
+:root {
+
+--black: #140f0e;
+--primary:#2a2b56;
+--secondary:#635daa;
+--violetClair: #b096fa;
+--pinkClair: #ffddf4;
+--white: #FFFFFF;
+
+--fuenteHeading: "PT Sans", sans-serif;
+
+}
+
+/* * {
     font-family: Helvetica, Arial, sans-serif;
     background-color: rgb(234, 234, 234);
-  }
+  } */
   
+  html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+
   body {
-    padding: 60px;
+    font-family: var(--fuenteHeading);
+    font-size: 1.6rem;
+    line-height: 2;
+  }
+
+  *, *:before, *:after { /*Arregla el padding para que no agregue más tamaño al bloque*/
+    box-sizing: inherit;
   }
   
+  .contenedor {
+
+    width: min(90%, 120rem); /*Instrucción para resumir*/
+    margin: 0 auto;
+
+  }
+
+  /*Formulario*/
+
   input {
     background-color: white;
     border-radius: 5px;
@@ -15,9 +48,61 @@
     font-size: 1.2rem;
     outline: none;
     padding: 10px 15px;
-    margin-bottom: 1rem;
     width: 100%;
   }
+
+  .input__form--centrar {
+
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .input {
+    /* margin-top: 2rem; */
+    background-color: var(--secondary);
+    padding-bottom: 2rem;
+    border-end-start-radius: 1rem;
+    border-end-end-radius: 1rem;
+  }
+
+  .input__title {
+
+    display: flex;
+    background-color: var(--pinkClair);
+    padding: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+  }
+
+  .input__title img {
+
+      width: 3rem;
+
+  }
+
+  .input__title h2 {
+
+      text-transform: uppercase;
+      color: var(--black);
+
+  }
+
+  .input__busqueda {
+
+    display: flex;
+
+  }
+
+  .input__busqueda--2 {
+
+    width: 6rem;
+    margin-left: 1rem;
+
+  }
+   
+ 
   
   h2 {
     font-size: 1.5rem;
@@ -28,6 +113,38 @@
     margin-bottom: 5px;
     text-align: center;
   }
+
+  img {
+    max-width: 100%;
+  }
+
+  /*Header*/
+
+  .contenido-header {
+    padding-top: 2rem;
+
+    display: flex;
+    background-color: var(--primary);
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contenido-header h1 {
+    color: var(--white);
+  }
+
+  .contenido-header img{
+      max-width: fit-content;
+      border: 2px solid var(--black);
+      border-radius: 1rem;
+  }
+
+  @media (min-width: 1050px) {
+      .contenido-header img {
+        max-width: 10%;
+      }
+  }
+
   
   .card-grid {
     display: flex;

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AddCategory, GifGrid } from "./components";
+import { Header } from "./components/Header";
 
 export const Gifexpertapp = () => {
 
@@ -23,7 +24,7 @@ export const Gifexpertapp = () => {
     <>
     {/* Título */}
 
-        <h1>GifExpertApp</h1>
+    <Header title={"GifExpertApp"}/>
 
     {/* Input */}
 

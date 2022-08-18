@@ -28,16 +28,45 @@ export const AddCategory = ({onNewCategory}) => {
 
     return (
 
-        <form onSubmit={ onSubmit }>
+        <>
+            <div className="contenedor input">
 
-            <input 
-                type="text" 
-                placeholder="Buscar gifs" 
-                value={ inputValue } 
-                onChange={onInputChange}
-            />
+                <div className="input__title">
 
-        </form>
+                    <h2>Busqueda de GIFS</h2>
 
+                    <img src="src\images\thunder.svg" alt="Rayo" />
+
+                </div>
+
+                <div className="input__form--centrar">
+
+                        <form onSubmit={ onSubmit }>
+
+                            <div className="input__busqueda">
+
+                                <input 
+                                    className="input__busqueda--1"
+                                    type="text" 
+                                    placeholder="Buscar gifs" 
+                                    value={ inputValue } 
+                                    onChange={onInputChange}
+                                    />
+
+                                <input 
+                                    className="input__busqueda--2"
+                                    src="src\images\busqueda.svg" 
+                                    type="image"
+                                 />
+
+                            </div>
+
+                        </form>
+
+                </div> {/*input__form--centrar */}
+
+            </div> {/*input */}
+
+        </>
   )
 }
