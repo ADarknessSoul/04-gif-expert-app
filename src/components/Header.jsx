@@ -1,6 +1,4 @@
 
-import React from 'react'
-
 export const Header = ({title}) => {
   return (
     
@@ -10,7 +8,7 @@ export const Header = ({title}) => {
 
         <div className="contenido-header">
 
-            <img src="src\images\gif-logo.png" alt="Logo" />
+            <img src="src\images\logo2.gif" alt="Logo" />
 
             <h1>{title}</h1>
 

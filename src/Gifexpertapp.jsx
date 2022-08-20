@@ -4,7 +4,7 @@ import { Header } from "./components/Header";
 
 export const Gifexpertapp = () => {
 
-    const [categories, setCategories] = useState([ 'One Punch']);
+    const [categories, setCategories] = useState(['gif']);
 
     // console.log(categories);
 
@@ -35,13 +35,16 @@ export const Gifexpertapp = () => {
 
     {/* Listado de Gifs */}
 
-        { 
+        <main className="contenedor">
+            
+            { 
             categories.map( category => (
                 <GifGrid key={category} category={category}/>
-            ))
-            
-        }
+                ))
+                
+            }
 
+        </main>
     </>
         
   )

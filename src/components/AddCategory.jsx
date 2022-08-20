@@ -39,7 +39,9 @@ export const AddCategory = ({onNewCategory}) => {
 
                 </div>
 
+
                 <div className="input__form--centrar">
+                    
 
                         <form onSubmit={ onSubmit }>
 
@@ -57,7 +59,7 @@ export const AddCategory = ({onNewCategory}) => {
                                     className="input__busqueda--2"
                                     src="src\images\busqueda.svg" 
                                     type="image"
-                                 />
+                                    />
 
                             </div>
 
