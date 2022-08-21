@@ -1,53 +1,64 @@
+import { useState, useEffect } from 'react';
 import { useFetchGifs } from '../hooks/useFetchGifs';
 import { GifGridItem } from './GifGridItem';
-import { GifLabels } from './GifLabels';
+import { GifsHeader } from './GifsHeader';
+import PropTypes from 'prop-types';
 
 export const GifGrid = ({category}) => {
 
-  const { images, isLoading } = useFetchGifs(category);
+  const [newLimit, setNewLimit] = useState(3);
+
+  const { images, isLoading } = useFetchGifs(category, newLimit);
+
+  /*Se asigna el nuevo valor del limite al momento de extraer los gifs*/
+  const onNewFetch = (limit) => {
+
+    setNewLimit(limit);
+
+  }
 
   return (
+
     <>
 
-    <div className='historial'>
+    <div className='gifs sombra'>
 
-    <GifLabels label={category}/>
+      {/* Título y botones de los Gifs */}
+      <section className='gifs__cabecera'>
 
-    </div>
+        <GifsHeader category={category} onClickButton = {value => onNewFetch(value) }/>
 
-    <div className='sombra'>
-
-          
-      <h3>{category}</h3>
+      </section>      
       
-
       {
         
         isLoading && (<h2>Cargando...</h2>) //Ternario simplificado
         
       }
 
-      <div className='card-grid'>
+      {/* Diseño de gifs */}
+      <section className='card-grid'>
         { 
 
           images.map( ( image ) => (
             <GifGridItem
               key={image.id}
               { ...image } 
-              // title={image.title}
-              // url={image.url}
              />
           ))
           
         }
-      </div>
+      </section>
 
     </div>
 
-      
-
-
     </>
   )
+
+}
+
+GifGrid.propTypes = {
+
+  category: PropTypes.string.isRequired
 
 }

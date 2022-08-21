@@ -1,5 +1,7 @@
+import PropTypes from 'prop-types';
 
 export const Header = ({title}) => {
+
   return (
     
     <>
@@ -21,4 +23,16 @@ export const Header = ({title}) => {
     </>
 
   )
+}
+
+Header.propTypes = {
+
+  title: PropTypes.string.isRequired
+
+}
+
+Header.defaultProps = {
+
+  title: "GifExpertApp"
+
 }
