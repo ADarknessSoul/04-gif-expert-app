@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useEffect } from "react";
 import { getGifs } from "../helpers/getGifs";
 
 export const useFetchGifs = (category, newLimit) => {
@@ -8,13 +8,21 @@ export const useFetchGifs = (category, newLimit) => {
     const [isLoading, setIsLoading] = useState(true);
 
 
-    useMemo(() => {
-
-        getGifs(category, newLimit)
-        .then( newImages => setImages(newImages));
+    const getImages = async() => {
+        const newImages = await getGifs( category, newLimit );
+        setImages(newImages);
         setIsLoading(false);
+    }
 
-    }, [newLimit])
+    useEffect(() => {
+
+        // getGifs(category, newLimit)
+        // .then( newImages => setImages(newImages));
+        // setIsLoading(false);
+
+        getImages();
+
+    }, [newLimit]);
 
 
 

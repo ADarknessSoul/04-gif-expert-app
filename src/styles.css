@@ -338,6 +338,7 @@
   .gifs__cabecera button {
 
     margin: 2rem auto;
+    width: 100%; 
 
   }
 
@@ -351,6 +352,7 @@
 
     .gifs__cabecera button {
       margin: 0;
+      width: auto;
     }
    
   }

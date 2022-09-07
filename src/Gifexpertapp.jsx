@@ -39,9 +39,9 @@ export const Gifexpertapp = () => {
     /*Se busca si la entrada del input corresponde a una categoría existente, y sino, se agrega en el state */
     const onAddCategory = (newCategory) => {
         
-        const arrayToLowerCase = categories.map( category => category.toLowerCase());    
+        const arrayToLowerCase = categories.map( category => category.replace(/[^a-z0-9]/gmi, "").replace(/\s+/g, "").replace(' ', '').toLowerCase());    
 
-        if( arrayToLowerCase.includes(newCategory.toLowerCase()) ) return;
+        if( arrayToLowerCase.includes(newCategory.replace(/[^a-z0-9]/gmi, "").replace(/\s+/g, "").replace(' ', '').toLowerCase()) ) return;
 
         setCategories([newCategory, ...categories]);
 

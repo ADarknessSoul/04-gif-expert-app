@@ -33,12 +33,14 @@ export const GifsHeader = ({category, onClickButton}) => {
 
      }
 
+
   return (
     <>
 
+
          {/* Header del Gif */}
         <button onClick={maxLimitDecrease} className="button button-red">-1</button>
-        <h3 id={category.replaceAll(' ', '')}>{category}</h3> 
+        <h3 id={category.replace(/[^a-z0-9]/gmi, "").replace(/\s+/g, "").replace(' ', '')} aria-label="heading3">{category}</h3> 
         <button onClick={maxLimitAdd} className="button button-green">+1</button>
 
     </>

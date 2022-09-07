@@ -9,7 +9,7 @@ export const GifLabels = ({label, onClickX}) => {
     onClickX(labelLowerCase);
 
   };
-
+ 
   /*Se busca el id del título para compararlo con la etiqueta y desplazar el scroll hasta la sección correspondiente */
   const positionScreen = (event) => {
 
@@ -17,9 +17,11 @@ export const GifLabels = ({label, onClickX}) => {
 
     const label = event.target.innerHTML;
 
-    const labelWithoutSpaces = label.replaceAll(' ', '');
+    // const labelWithoutSpaces = label.replaceAll(' ', '');
     
-    const h3 = document.querySelector('#' + labelWithoutSpaces);
+    const labelWithoutSpecialCharacter = label.replace(/[^a-z0-9]/gmi, "").replace(/\s+/g, "").replace(' ', '');
+    
+    const h3 = document.getElementById(labelWithoutSpecialCharacter);
 
     h3.scrollIntoView({behavior: "smooth"});
 
