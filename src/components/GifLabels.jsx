@@ -38,7 +38,7 @@ export const GifLabels = ({label, onClickX}) => {
           <div className="contenido-label">
 
               <p onClick={ event => positionScreen(event) }>{label}</p>
-              <img onClick={ deleteLabel }  src="src\images\x-symbol.svg" alt="símbolo de x" />
+              <img onClick={ deleteLabel }  src="\images\x-symbol.svg" alt="símbolo de x" />
 
           </div>
 

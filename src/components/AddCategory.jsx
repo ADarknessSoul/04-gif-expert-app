@@ -37,7 +37,7 @@ export const AddCategory = ({onNewCategory}) => {
 
                     <h2>Busqueda de GIFS</h2>
 
-                    <img src="src\images\thunder.svg" alt="Rayo" />
+                    <img src="\images\thunder.svg" alt="Rayo" />
 
                 </div>
 
@@ -59,7 +59,7 @@ export const AddCategory = ({onNewCategory}) => {
 
                                 <input 
                                     className="input__busqueda--2"
-                                    src="src\images\busqueda.svg" 
+                                    src="\images\busqueda.svg" 
                                     type="image"
                                     />
 

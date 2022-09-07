@@ -26,7 +26,7 @@
     font-size: 1.6rem;
     line-height: 2;
 
-    background-image: url("D:\Curso_de_React\React\04-gif-expert-app\src\images\space.jpg");
+    background-image: url("/public/images/space.jpg");
 
     /* background: rgb(22,16,14);
     background: linear-gradient(180deg, rgba(22,16,14,0.8606793059020483) 35%, rgba(63,42,86,0.7290266448376226) 100%); */
